@@ -33,6 +33,7 @@ const Form = () => {
             message: "",
           });
           console.log(result.text);
+          alert("Te amo mi love love")
         },
         (error) => {
           setBtn("Send Email");
