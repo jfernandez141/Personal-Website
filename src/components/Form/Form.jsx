@@ -1,4 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
+import emailjs from "@emailjs/browser";
+
+const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } =
+  process.env;
 
 const Form = () => {
   const [form, setForm] = useState({
@@ -6,11 +11,34 @@ const Form = () => {
     email: "",
     message: "",
   });
+  const [btn, setBtn] = useState("Send Email");
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(form);
+    setBtn("Sending...");
 
+    emailjs
+      .send(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        form,
+        REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setBtn("Send Email");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+          console.log(result.text);
+        },
+        (error) => {
+          setBtn("Send Email");
+          console.log(error.text);
+        }
+      );
   }
   function handleInputChange(event) {
     const property = event.target.name;
@@ -55,7 +83,7 @@ const Form = () => {
             onChange={handleInputChange}
           ></textarea>
         </div>
-        <button>Send</button>
+        <button>{btn}</button>
       </form>
     </div>
   );
