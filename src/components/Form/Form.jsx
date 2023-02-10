@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import style from "./Form.module.css";
+import linkedin from "../../img/linkedin.png"
+import github from "../../img/github.png"
 
 import emailjs from "@emailjs/browser";
 
@@ -34,6 +36,7 @@ const Form = () => {
             message: "",
           });
           console.log(result.text);
+          alert("Message successfully sent!")
         },
         (error) => {
           setBtn("Send Email");
@@ -55,10 +58,10 @@ const Form = () => {
       <h2 className={style.title}>Contact</h2>
       <div className={style.links}>
         <a href="https://www.linkedin.com/in/jhamil-fernandez/" target="_blank">
-          linkedin
+          <img src={linkedin} alt="Linkedin" width="70px"/>
         </a>
         <a href="https://github.com/jfernandez141" target="_blank">
-          Github
+          <img src={github} alt="Github" width="70px" />
         </a>
       </div>
       <form onSubmit={handleSubmit} className={style.form}>
@@ -93,7 +96,7 @@ const Form = () => {
             value={form.message}
             onChange={handleInputChange}
           ></textarea>
-          <p>Email send it </p>
+          
         </div>
         <button className={style.btn}>{btn}</button>
       </form>

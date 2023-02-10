@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 4%;
 }
 .container {
   width: 90vw;
@@ -21,7 +21,7 @@
 .tittle {
   text-align: center;
   font-size: xx-large;
-  color: #e3b041;
+  color: #f3bc44;
   
   
   @media only screen and (max-width: 1400px) {
@@ -41,7 +41,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #ff0000;
+  color: #e82626;
   font-weight: bold;
   border-radius: 10px;
   padding: 5px 20px 5px 20px;
