@@ -55,6 +55,7 @@ const Form = () => {
 
   return (
     <div id="contact" className={style.contacBody}>
+      <hr />
       <h2 className={style.title}>Contact</h2>
       <div className={style.links}>
         <a href="https://www.linkedin.com/in/jhamil-fernandez/" target="_blank">

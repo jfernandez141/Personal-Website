@@ -64,7 +64,7 @@ const Skills = () => {
             <img src={git} alt="git" className={style.img} />
             Git
           </span>
-          <span className={style.span}></span>
+          
         </div>
       </div>
     </div>
