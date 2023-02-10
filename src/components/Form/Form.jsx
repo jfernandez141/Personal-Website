@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import style from "./Form.module.css";
 
 import emailjs from "@emailjs/browser";
 
@@ -33,7 +34,6 @@ const Form = () => {
             message: "",
           });
           console.log(result.text);
-          alert("Te amo mi love love")
         },
         (error) => {
           setBtn("Send Email");
@@ -51,31 +51,41 @@ const Form = () => {
   }
 
   return (
-    <div id="contact">
-      <form onSubmit={handleSubmit}>
+    <div id="contact" className={style.contacBody}>
+      <h2 className={style.title}>Contact</h2>
+      <div className={style.links}>
+        <a href="https://www.linkedin.com/in/jhamil-fernandez/" target="_blank">
+          linkedin
+        </a>
+        <a href="https://github.com/jfernandez141" target="_blank">
+          Github
+        </a>
+      </div>
+      <form onSubmit={handleSubmit} className={style.form}>
+        <input
+          className={style.inputForm}
+          placeholder="Name:"
+          required
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleInputChange}
+        />
+
+        <input
+          className={style.inputForm}
+          placeholder="Email: "
+          required
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={handleInputChange}
+        />
+
         <div>
-          <label htmlFor="name">Name: </label>
-          <input
-            required
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email: </label>
-          <input
-            required
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message: </label>
           <textarea
+            className={style.message}
+            placeholder="Message:"
             required
             name="message"
             cols="30"
@@ -83,8 +93,9 @@ const Form = () => {
             value={form.message}
             onChange={handleInputChange}
           ></textarea>
+          <p>Email send it </p>
         </div>
-        <button>{btn}</button>
+        <button className={style.btn}>{btn}</button>
       </form>
     </div>
   );

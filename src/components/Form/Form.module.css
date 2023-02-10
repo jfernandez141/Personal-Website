@@ -1,0 +1,91 @@
+.contacBody {
+  padding: 50px;
+}
+.title {
+  text-align: center;
+  font-size: 30px;  
+  color: #e3b041;
+  text-shadow: 2px 2px 10px black;
+}
+.links{
+  display: flex;
+  justify-content: center;  
+}
+.links a{
+  padding: 2%;
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+.links a:hover{
+  color: antiquewhite;
+  text-decoration: underline;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgb(0 0 0 / 16%);
+  padding: 30px;
+  margin: 0 auto;
+  background-color: #e6e6e6;
+}
+.inputForm {
+  padding: 10px 10px 10px 1px;
+  border-radius: 6px;
+  border: 2px solid #4c5268;
+  background-color: transparent;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #4c5268;
+}
+.message {
+  padding: 10px 10px 10px 1px;
+  border-radius: 6px;
+  color: #4c5268;
+  border: 2px solid #4c5268;
+  background-color: transparent;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.btn {
+  align-self: center;
+  color: #e6e6e6;
+  background-color: #e3b041;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  margin: 15px 0;
+  font-weight: 700;
+  cursor: pointer;
+  width: 150px;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: #25c27d;
+  transform: scale(1.05);
+  color: #1a1a1a;
+}
+
+@media (max-width: 700px) {
+  .form {
+    max-width: 100%;
+    padding: 20px;
+    margin: 10px;
+  }
+  .contacBody {
+    max-width: 100%;
+    padding: 20px 0;
+  }
+  .inputForm{
+    padding: 1px
+  }
+  .message{
+    padding: 1px;
+  }
+}

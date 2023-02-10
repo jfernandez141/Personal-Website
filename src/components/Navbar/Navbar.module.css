@@ -1,0 +1,23 @@
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #1a1a1a;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  
+  box-shadow: -2px 5px 20px rgba(0, 0, 0, 0.6);
+}
+.navItems a {
+  margin: 15px;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navItems a:hover {
+    color: #4192e3;
+  }

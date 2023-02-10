@@ -1,0 +1,13 @@
+.footer{
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding-top: 5px;
+  background-color: #1a1a1a;
+  box-shadow: -2px 5px 20px rgba(0, 0, 0, 0.6);
+  color: #e6e6e6;
+}
+.name{
+    color: blue;
+}

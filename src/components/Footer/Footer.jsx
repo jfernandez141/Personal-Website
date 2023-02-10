@@ -1,11 +1,19 @@
+import style from "./Footer.module.css";
 
+const Footer = () => {
+  return (
+    <div className={style.footer}>
+      <p>
+        © 2023 Developer by{" "}
+        <a
+          href="https://www.linkedin.com/in/jhamil-fernandez/"
+          className={style.name}
+        >
+          Jhamil Fernandez
+        </a>
+      </p>
+    </div>
+  );
+};
 
-const Footer =()=>{
-    return(
-        <div>
-            <p>© 2023 Developer by <span>Jhamil Fernandez</span></p>
-        </div>
-    )
-}
-
-export default Footer
+export default Footer;
