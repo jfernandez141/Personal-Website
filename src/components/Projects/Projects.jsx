@@ -17,7 +17,10 @@ const Projects = () => {
             >
               <img src={rick} alt="Rick And Morty" className={style.img} />
             </a>
-            <a href="https://github.com/jfernandez141/RickAndMortyProject">
+            <a
+              href="https://github.com/jfernandez141/RickAndMortyProject"
+              target="_blank"
+            >
               Repo
             </a>
           </div>
@@ -28,7 +31,7 @@ const Projects = () => {
             <a href="https://pi-pokemon-jfernandez.vercel.app/" target="_blank">
               <img src={pokemon} alt="Pokemon" className={style.img} />
             </a>
-            <a href="https://github.com/jfernandez141/PIPokemon">Repo</a>
+            <a href="https://github.com/jfernandez141/PIPokemon" target="_blank">Repo</a>
           </div>
         </div>
       </div>
