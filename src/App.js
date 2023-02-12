@@ -7,10 +7,14 @@ import Projects from "./components/Projects/Projects";
 import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
 import ReactGA from "react-ga";
+import React, { useEffect } from "react";
 
-const TRACKING_ID = "UA-232790640-1";
-ReactGA.initialize(TRACKING_ID);
 function App() {
+  useEffect(() => {
+    const TRACKING_ID = "UA-232790640-1";
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.pageview("/")
+  });
   return (
     <>
       <Navbar />
