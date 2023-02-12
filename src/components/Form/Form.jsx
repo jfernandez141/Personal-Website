@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import style from "./Form.module.css";
-import linkedin from "../../img/linkedin.png"
-import github from "../../img/github.png"
-
+import linkedin from "../../img/linkedin.png";
+import github from "../../img/github.png";
+import ReactGA from "react-ga";
 import emailjs from "@emailjs/browser";
 
 const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } =
@@ -16,6 +16,12 @@ const Form = () => {
   });
   const [btn, setBtn] = useState("Send Email");
 
+  const clickHandler = (name) => {
+    ReactGA.event({
+      category: "Contact",
+      action: `Open ${name}`,
+    });
+  };
   function handleSubmit(event) {
     event.preventDefault();
     setBtn("Sending...");
@@ -36,7 +42,7 @@ const Form = () => {
             message: "",
           });
           console.log(result.text);
-          alert("Message successfully sent!")
+          alert("Message successfully sent!");
         },
         (error) => {
           setBtn("Send Email");
@@ -58,10 +64,20 @@ const Form = () => {
       <hr />
       <h2 className={style.title}>Contact</h2>
       <div className={style.links}>
-        <a href="https://www.linkedin.com/in/jhamil-fernandez/" target="_blank">
-          <img src={linkedin} alt="Linkedin" width="70px"/>
+        <a
+          href="https://www.linkedin.com/in/jhamil-fernandez/"
+          target="_blank"
+          onClick={() => clickHandler("Linkedin")}
+          onAuxClick={() => clickHandler("Linkedin")}
+        >
+          <img src={linkedin} alt="Linkedin" width="70px" />
         </a>
-        <a href="https://github.com/jfernandez141" target="_blank">
+        <a
+          href="https://github.com/jfernandez141"
+          target="_blank"
+          onClick={() => clickHandler("Github")}
+          onAuxClick={() => clickHandler("Github")}
+        >
           <img src={github} alt="Github" width="70px" />
         </a>
       </div>
@@ -97,7 +113,6 @@ const Form = () => {
             value={form.message}
             onChange={handleInputChange}
           ></textarea>
-          
         </div>
         <button className={style.btn}>{btn}</button>
       </form>
