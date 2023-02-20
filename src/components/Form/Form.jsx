@@ -21,6 +21,7 @@ const Form = () => {
       category: "Contact",
       action: `Open ${name}`,
     });
+    
   };
   function handleSubmit(event) {
     event.preventDefault();
