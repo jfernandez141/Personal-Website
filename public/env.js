@@ -2,7 +2,7 @@ window.env = {
   "ACLOCAL_PATH": "C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal",
   "ALLUSERSPROFILE": "C:\\ProgramData",
   "APPDATA": "C:\\Users\\j-fer\\AppData\\Roaming",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_8472_SZHJGWAESNWXDOYZ",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_9292_AWUEBVMBKBZQJKJC",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
@@ -90,7 +90,7 @@ window.env = {
   "TEMP": "C:\\Users\\j-fer\\AppData\\Local\\Temp",
   "TERM": "xterm-256color",
   "TERM_PROGRAM": "vscode",
-  "TERM_PROGRAM_VERSION": "1.75.1",
+  "TERM_PROGRAM_VERSION": "1.76.0",
   "TMP": "C:\\Users\\j-fer\\AppData\\Local\\Temp",
   "TMPDIR": "C:\\Users\\j-fer\\AppData\\Local\\Temp",
   "USERDOMAIN": "JF",
@@ -104,7 +104,7 @@ window.env = {
   "WINDIR": "C:\\WINDOWS",
   "WSLENV": "WT_SESSION::WT_PROFILE_ID",
   "WT_PROFILE_ID": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-  "WT_SESSION": "efcc7451-d8d3-4929-a7cf-ae47584a4b6b",
+  "WT_SESSION": "cf37c89d-8f0d-4250-8bd3-85776c67b128",
   "ZES_ENABLE_SYSMAN": "1",
   "_": "C:/Program Files/nodejs/node.exe"
 };

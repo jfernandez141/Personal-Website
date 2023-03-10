@@ -4,6 +4,8 @@ import linkedin from "../../img/linkedin.png";
 import github from "../../img/github.png";
 import ReactGA from "react-ga";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } =
   process.env;
@@ -21,7 +23,31 @@ const Form = () => {
       category: "Contact",
       action: `Open ${name}`,
     });
-    
+  };
+  const notify = (type) => {
+    if (type) {
+      toast.success(" Email sent correctly, thank you", {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      toast.warn("Error sending email, Sorry!", {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
   };
   function handleSubmit(event) {
     event.preventDefault();
@@ -43,10 +69,11 @@ const Form = () => {
             message: "",
           });
           console.log(result.text);
-          alert("Message successfully sent!");
+          notify(true);
         },
         (error) => {
           setBtn("Send Email");
+          notify(false);
           console.log(error.text);
         }
       );
@@ -117,6 +144,19 @@ const Form = () => {
         </div>
         <button className={style.btn}>{btn}</button>
       </form>
+      <button onClick={notify}> Tests</button>
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
