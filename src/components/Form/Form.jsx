@@ -143,8 +143,7 @@ const Form = () => {
           ></textarea>
         </div>
         <button className={style.btn}>{btn}</button>
-      </form>
-      <button onClick={notify}> Tests</button>
+      </form>      
       <ToastContainer
         position="top-right"
         autoClose={4000}
