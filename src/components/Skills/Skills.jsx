@@ -9,9 +9,8 @@ import postgres from "../../img/postgresql.png";
 import nodejs from "../../img/nodejs.png";
 import express from "../../img/express.png";
 import sequelize from "../../img/sequelize.png";
+import aws from "../../img/aws.png";
 import style from "./Skills.module.css";
-
-// meter los demas iconos
 
 const Skills = () => {
   return (
@@ -33,11 +32,11 @@ const Skills = () => {
           </span>
           <span className={style.span}>
             <img src={nodejs} alt="nodejs" className={style.img} />
-            Nodejs
+            Node.js
           </span>
           <span className={style.span}>
             <img src={reactjs} alt="ReactJs" className={style.img} />
-            React Js
+            React.js
           </span>
           <span className={style.span}>
             <img src={redux} alt="redux" className={style.img} />
@@ -45,7 +44,7 @@ const Skills = () => {
           </span>
           <span className={style.span}>
             <img src={express} alt="express" className={style.img} />
-            Express
+            Express.JS
           </span>
           <span className={style.span}>
             <img src={sequelize} alt="sequelize" className={style.img} />
@@ -53,18 +52,20 @@ const Skills = () => {
           </span>
           <span className={style.span}>
             <img src={postgres} alt="postgres" className={style.img} />
-            Postgres
+            PostgreSQL
           </span>
-
           <span className={style.span}>
             <img src={sql} alt="sql" className={style.img} />
             SQL
           </span>
           <span className={style.span}>
+            <img src={aws} alt="sql" className={style.img} />
+            AWS
+          </span>
+          <span className={style.span}>
             <img src={git} alt="git" className={style.img} />
             Git
           </span>
-          
         </div>
       </div>
     </div>

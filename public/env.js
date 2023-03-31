@@ -2,7 +2,7 @@ window.env = {
   "ACLOCAL_PATH": "C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal",
   "ALLUSERSPROFILE": "C:\\ProgramData",
   "APPDATA": "C:\\Users\\j-fer\\AppData\\Roaming",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_26848_MZHHMYTXMRSMDYGR",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_12396_NRPIBDIFXLGVRXQO",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
@@ -104,7 +104,7 @@ window.env = {
   "WINDIR": "C:\\WINDOWS",
   "WSLENV": "WT_SESSION::WT_PROFILE_ID",
   "WT_PROFILE_ID": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-  "WT_SESSION": "a5441617-142c-4d82-b5fc-735239ece717",
+  "WT_SESSION": "1b46b9db-52c0-4195-b4f0-cd4855814e6d",
   "ZES_ENABLE_SYSMAN": "1",
   "_": "C:/Program Files/nodejs/node.exe"
 };
