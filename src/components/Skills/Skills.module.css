@@ -1,8 +1,9 @@
-.skillsBody {  
-  padding-top: 60px;
+.skillsBody {
+  padding-top: 3%;
+  padding-bottom: 3%;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 4%;
   margin-bottom: 4%;
 }
 .container {
@@ -10,8 +11,7 @@
   display: block;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 10px black;
-  padding-top: 1%;
+  box-shadow: 2px 2px 10px black;  
   padding-bottom: 4%;
   background-color: rgba(227, 176, 65, 0.3);
   border-radius: 10px;

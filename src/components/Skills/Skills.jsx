@@ -17,7 +17,7 @@ const Skills = () => {
   return (
     <div id="skills" className={style.skillsBody}>
       <div className={style.container}>
-        <h2 className={style.tittle}>Tech Skills</h2>
+      <h2 className={style.tittle}>Tech Skills</h2>
         <div className={style.spanContainer}>
           <span className={style.span}>
             <img src={html} alt="html" className={style.img} />

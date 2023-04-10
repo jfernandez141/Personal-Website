@@ -9,9 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
-
 
 .jfimg {
   padding-top: 20px;
@@ -64,7 +62,7 @@
   width: fit-content;
   text-align: justify;
   color: #e6e6e6;
-  font-size: 1.7vmax;  
+  font-size: 1.7vmax;
   font-weight: 600;
   padding: 1% 5% 1% 5%;
   margin-bottom: 7%;
@@ -81,18 +79,18 @@
     flex-direction: column;
     align-items: center;
   }
- .jfimg{
-  min-width: 200px;
- }
- .name{
-  padding-top: 7%;
-  margin: 0 auto;
- }
- .position{
-  margin: 0 auto;
- }
- .about{
-  font-size: large;
-  padding: 4%;
- }
+  .jfimg {
+    min-width: 200px;
+  }
+  .name {
+    padding-top: 7%;
+    margin: 0 auto;
+  }
+  .position {
+    margin: 0 auto;
+  }
+  .about {
+    font-size: large;
+    padding: 4%;
+  }
 }
