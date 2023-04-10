@@ -10,6 +10,7 @@ import nodejs from "../../img/nodejs.png";
 import express from "../../img/express.png";
 import sequelize from "../../img/sequelize.png";
 import aws from "../../img/aws.png";
+import python from "../../img/python.png";
 import style from "./Skills.module.css";
 
 const Skills = () => {
@@ -57,6 +58,10 @@ const Skills = () => {
           <span className={style.span}>
             <img src={sql} alt="sql" className={style.img} />
             SQL
+          </span>
+          <span className={style.span}>
+            <img src={python} alt="sql" className={style.img} />
+            Python
           </span>
           <span className={style.span}>
             <img src={aws} alt="sql" className={style.img} />

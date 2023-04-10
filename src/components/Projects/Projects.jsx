@@ -53,7 +53,7 @@ const Projects = () => {
               href="https://github.com/jfernandez141/PIPokemon"
               target="_blank"
               onClick={() => clickHandler("Pokemon Repo")}
-              onAuxClick={() => clickHandler("Pokemon App")}
+              onAuxClick={() => clickHandler("Pokemon App")}              
             >
               Repo
             </a>
