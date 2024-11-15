@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className={style.footer}>
       <p>
-        © 2023 Developer by{" "}
+        © 2024 Developer by{" "}
         <a
           href="https://www.linkedin.com/in/jhamil-fernandez/"
           className={style.name}
