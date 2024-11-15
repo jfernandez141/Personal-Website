@@ -11,6 +11,7 @@ import express from "../../img/express.png";
 import sequelize from "../../img/sequelize.png";
 import aws from "../../img/aws.png";
 import python from "../../img/python.png";
+import docker from "../../img/docker.png"
 import style from "./Skills.module.css";
 
 const Skills = () => {
@@ -18,11 +19,7 @@ const Skills = () => {
     <div id="skills" className={style.skillsBody}>
       <div className={style.container}>
       <h2 className={style.tittle}>Tech Skills</h2>
-        <div className={style.spanContainer}>
-          <span className={style.span}>
-            <img src={html} alt="html" className={style.img} />
-            HTML
-          </span>
+        <div className={style.spanContainer}>          
           <span className={style.span}>
             <img src={js} alt="JavaScript" className={style.img} />
             JavaScript
@@ -36,13 +33,13 @@ const Skills = () => {
             Node.js
           </span>
           <span className={style.span}>
-            <img src={reactjs} alt="ReactJs" className={style.img} />
-            React.js
+            <img src={docker} alt="Docker" className={style.img} />
+            Docker
           </span>
           <span className={style.span}>
-            <img src={redux} alt="redux" className={style.img} />
-            Redux
-          </span>
+            <img src={reactjs} alt="ReactJs" className={style.img} />
+            React.js
+          </span>          
           <span className={style.span}>
             <img src={express} alt="express" className={style.img} />
             Express.JS

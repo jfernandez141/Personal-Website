@@ -7,8 +7,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } =
-  process.env;
+const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } =  process.env;
 
 const Form = () => {
   const [form, setForm] = useState({
@@ -96,7 +95,7 @@ const Form = () => {
           href="https://www.linkedin.com/in/jhamil-fernandez/"
           target="_blank"
           onClick={() => clickHandler("Linkedin")}
-          onAuxClick={() => clickHandler("Linkedin")}
+          onAuxClick={() => clickHandler("Linkedin")} rel="noreferrer"
         >
           <img src={linkedin} alt="Linkedin" width="70px" />
         </a>
@@ -104,7 +103,7 @@ const Form = () => {
           href="https://github.com/jfernandez141"
           target="_blank"
           onClick={() => clickHandler("Github")}
-          onAuxClick={() => clickHandler("Github")}
+          onAuxClick={() => clickHandler("Github")} rel="noreferrer"
         >
           <img src={github} alt="Github" width="70px" />
         </a>
