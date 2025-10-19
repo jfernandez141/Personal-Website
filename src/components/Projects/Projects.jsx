@@ -1,9 +1,36 @@
 import rick from "../../img/rm.jpg";
 import pokemon from "../../img/pokemon.jpg";
-import store from "../../img/storeClient.png"
-import customer from "../../img/customer.png"
+import store from "../../img/storeClient.png";
+import customer from "../../img/customer.png";
 import style from "./Projects.module.css";
 import ReactGA from "react-ga";
+
+const projectsData = [
+  {
+    name: "Rick And Morty",
+    appLink: "https://rick-and-morty-project-jfernandez.vercel.app/",
+    repoLink: "https://github.com/jfernandez141/RickAndMortyProject",
+    img: rick,
+  },
+  {
+    name: "Pokemon",
+    appLink: "https://pi-pokemon-jfernandez.vercel.app/",
+    repoLink: "https://github.com/jfernandez141/PIPokemon",
+    img: pokemon,
+  },
+  {
+    name: "Store App",
+    appLink: "https://storespacefood.netlify.app/",
+    repoLink: "https://github.com/jfernandez141/storeclient",
+    img: store,
+  },
+  {
+    name: "Customer App",
+    appLink: "https://spacefood.netlify.app/",
+    repoLink: "https://github.com/jfernandez141/customerclient",
+    img: customer,
+  },
+];
 
 const Projects = () => {
   const clickHandler = (name) => {
@@ -12,100 +39,35 @@ const Projects = () => {
       action: `Open the ${name}`,
     });
   };
+
   return (
-    <div className={style.projects} id="portfolio">
+    <section className={style.projects} id="portfolio">
       <hr />
       <h2 className={style.title}>Portfolio</h2>
       <div className={style.portfolioContainer}>
-        <div>
-          <div className={style.box}>
-            Rick And Morty
+        {projectsData.map((project) => (
+          <article key={project.name} className={style.box}>
+            <h3>{project.name}</h3>
             <a
-              href="https://rick-and-morty-project-jfernandez.vercel.app/"
-              onClick={() => clickHandler("Rick App")}
-              onAuxClick={() => clickHandler("Rick App")}
+              href={project.appLink}
               target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => clickHandler(`${project.name} App`)}
             >
-              <img src={rick} alt="Rick And Morty" className={style.img} />
+              <img src={project.img} alt={project.name} className={style.img} />
             </a>
             <a
-              href="https://github.com/jfernandez141/RickAndMortyProject"
-              onClick={() => clickHandler("Rick Repo")}
-              onAuxClick={() => clickHandler("Rick Repo")}
+              href={project.repoLink}
               target="_blank"
-            >
-              Repo
-            </a>
-          </div>
-        </div>
-        <div>
-          <div className={style.box}>
-            Pokemon
-            <a
-              href="https://pi-pokemon-jfernandez.vercel.app/"
-              target="_blank"
-              onClick={() => clickHandler("Pokemon App")}
-              onAuxClick={() => clickHandler("Pokemon App")}
-            >
-              <img src={pokemon} alt="Pokemon" className={style.img} />
-            </a>
-            <a
-              href="https://github.com/jfernandez141/PIPokemon"
-              target="_blank"
-              onClick={() => clickHandler("Pokemon Repo")}
-              onAuxClick={() => clickHandler("Pokemon App")}              
+              rel="noopener noreferrer"
+              onClick={() => clickHandler(`${project.name} Repo`)}
             >
               Repo
             </a>
-          </div>
-          
-        </div>
-        <div>
-          <div className={style.box}>
-            Store App
-            <a
-              href="https://storespacefood.netlify.app/"
-              target="_blank"
-              onClick={() => clickHandler("Store App")}
-              onAuxClick={() => clickHandler("Store App")}
-            >
-              <img src={store} alt="Store APP" className={style.img} />
-            </a>
-            <a
-              href="https://github.com/jfernandez141/storeclient"
-              target="_blank"
-              onClick={() => clickHandler("Store Repo")}
-              onAuxClick={() => clickHandler("Store App")}
-            >
-              Repo
-            </a>
-          </div>
-          
-        </div>
-        <div>
-          <div className={style.box}>
-            Customer App
-            <a
-              href="https://spacefood.netlify.app/"
-              target="_blank"
-              onClick={() => clickHandler("Customer App")}
-              onAuxClick={() => clickHandler("Customer App")}
-            >
-              <img src={customer} alt="Customer App" className={style.img} />
-            </a>
-            <a
-              href="https://github.com/jfernandez141/customerclient"
-              target="_blank"
-              onClick={() => clickHandler("Customer Repo")}
-              onAuxClick={() => clickHandler("Customer App")}
-            >
-              Repo
-            </a>
-          </div>
-          
-        </div>
+          </article>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
