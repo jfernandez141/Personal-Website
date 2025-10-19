@@ -61,22 +61,32 @@
 }
 .btn {
   align-self: center;
-  color: #e6e6e6;
+  color: #fff;
   background-color: #e3b041;
-  padding: 10px 40px;
-  border-radius: 20px;
+  padding: 12px 40px;
+  border-radius: 25px;
   border: none;
   margin: 15px 0;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  width: 150px;
+  width: 160px;
   text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
 }
+
 .btn:hover {
   background-color: #25c27d;
+  color: #fff;
   transform: scale(1.05);
-  color: #1a1a1a;
 }
+
+.inputForm:focus,
+.message:focus {
+  outline: none;
+  border-color: #25c27d;
+  box-shadow: 0 0 6px rgba(37, 194, 125, 0.4);
+}
+
 
 @media (max-width: 700px) {
   .form {
