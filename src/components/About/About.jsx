@@ -1,22 +1,28 @@
 import style from "./About.module.css";
-import homeimg from "../../img/home.png";
 import jfimg from "../../img/jfimg.jpg";
 
-const yearsOfExperience = new Date().getFullYear() - 2022 -
-  (new Date().getMonth() < 9 ? 1 : 0); 
-  
+const startYear = 2022;
+const yearsOfExperience = new Date().getFullYear() - startYear;
+
 const About = () => {
   return (
-    <div id="home" className={style.home}>
-      <div className={style.section}>
-        <img src={jfimg} alt="Jhamil Fernandez" className={style.jfimg} />
+    <section id="home" className={style.home}>
+      <header className={style.section}>
+        <img
+          src={jfimg}
+          alt="Jhamil Fernandez"
+          className={style.jfimg}
+          loading="lazy"
+        />
         <div>
           <h1 className={style.name}>Jhamil Fernandez</h1>
           <h2 className={style.position}>Backend Developer</h2>
         </div>
-      </div>
-      <h2 className={style.aboutTittle}>About Me</h2>
-      <div className={style.section}>
+      </header>
+
+      <h2 className={style.aboutTitle}>About Me</h2>
+
+      <article className={style.section}>
         <p className={style.about}>
           I am a Backend Developer with over {yearsOfExperience} years of hands-on experience specializing in Node.js.
           My expertise extends to developing scalable and efficient APIs, integrating third-party services,
@@ -32,10 +38,9 @@ const About = () => {
           I am committed, detail-oriented, and goal-driven, always aiming to contribute to innovative projects
           while continuously improving my skills.
         </p>
+      </article>
+    </section>
 
-
-      </div>
-    </div>
   );
 };
 

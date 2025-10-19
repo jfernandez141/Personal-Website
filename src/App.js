@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
@@ -13,8 +12,8 @@ function App() {
   useEffect(() => {
     const TRACKING_ID = "UA-232790640-1";
     ReactGA.initialize(TRACKING_ID);
-    ReactGA.pageview("/")
-  });
+    ReactGA.pageview("/");
+  }, []);
   return (
     <>
       <Navbar />
