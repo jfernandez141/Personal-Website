@@ -3,22 +3,63 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  background-color: #1a1a1a;
-  color: #fff;
-  position: fixed;
   width: 100%;
-  z-index: 2;
-  
-  box-shadow: -2px 5px 20px rgba(0, 0, 0, 0.6);
-}
-.navItems a {
-  margin: 15px;
-  color: #fff;
-  position: relative;
-  text-decoration: none;
-  font-weight: bold;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease;
 }
 
-.navItems a:hover {
-    color: #4192e3;
+.navItems a {
+  margin: 0 20px;
+  color: #e6e6e6;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+/* --- Línea animada debajo de los enlaces solo al hacer hover --- */
+.navItems a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #4192e3;
+  transition: width 0.3s ease;
+}
+
+/* --- Hover sobre enlaces --- */
+.navItems a:hover::after {
+  width: 100%;
+}
+
+/* --- Enlace activo según scroll: solo cambia color --- */
+.navItems a.active {
+  color: #4192e3;
+}
+
+/* Evita animación de línea para el enlace activo */
+.navItems a.active::after {
+  width: 0; /* no se muestra la línea */
+  transition: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .navBar {
+    height: 50px;
   }
+
+  .navItems a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+}

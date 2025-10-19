@@ -17,12 +17,21 @@ function App() {
   return (
     <>
       <Navbar />
-      <About />
-      <Skills />
-      <Projects />
-      <Form />
+      <section id="home">
+        <About />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="portfolio">
+        <Projects />
+      </section>
+      <section id="contact">
+        <Form />
+      </section>
       <Footer />
     </>
+
   );
 }
 
