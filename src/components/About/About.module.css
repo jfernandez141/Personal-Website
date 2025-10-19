@@ -64,7 +64,8 @@
   font-size: 2rem;
   text-align: center;
   color: #e3b041;
-  padding-top: 3rem;
+  margin-bottom: 0.8rem;
+  padding-top: 1.5rem;
   text-shadow: 2px 2px 10px black;
 }
 
@@ -78,13 +79,14 @@
   font-size: 1.3rem;
   font-weight: 500;
   padding: 2rem 3rem;
-  margin: 2rem auto; /* reducido de 3rem a 2rem para acercarlo al título */
-  width: 90%; /* un poco más ancho en general */
-  max-width: 1100px; /* antes 900px, ahora más ancho en pantallas grandes */
+  margin: 0 auto 2rem auto;
+  width: 90%;
+  max-width: 1100px;
   text-align: justify;
   line-height: 1.6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 
 /* --- Responsive adjustments --- */
 @media (max-width: 900px) {
