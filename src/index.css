@@ -1,19 +1,162 @@
-html {
-  scroll-behavior: smooth;
+/* ================= Reset Global ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ================= Scroll Smooth ================= */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* Compensa navbar fija */
+}
+
+/* ================= Body ================= */
 body {
-  background-color: rgb(79, 97, 97);
-  /* background-color: rgba(0, 0, 0, 0.942); */
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e6e6e6;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  transition: background 0.5s ease, color 0.5s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ================= Links ================= */
+a {
+  color: #4192e3;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
+
+a:hover {
+  color: #f3bc44;
+}
+
+/* ================= Scrollbar ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(243, 188, 68, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(26, 26, 26, 0.6);
+}
+
+/* ================= Fade-in Global ================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards ease-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= Headings Global ================= */
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #e6e6e6;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+  transition: color 0.3s ease;
+}
+
+/* ================= Utility Classes ================= */
+.text-center {
+  text-align: center;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.pt-1 { padding-top: 1rem; }
+.pb-1 { padding-bottom: 1rem; }
+
+/* ================= Buttons & Interactive Elements ================= */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: #e6e6e6;
+  background-color: rgba(50, 50, 50, 0.6);
+  border: 1px solid rgba(227, 176, 65, 0.5);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, input:hover, select:hover, textarea:hover {
+  background-color: rgba(243, 188, 68, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ================= Global Cards / Sections ================= */
+.card, .section {
+  background-color: rgba(44, 52, 64, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  padding: 2rem;
+  margin: 2rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(243, 188, 68, 0.4);
+}
+
+/* ================= Responsive Typography ================= */
+@media (max-width: 1200px) {
+  body { font-size: 15px; }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}
+
+@media (max-width: 500px) {
+  body { font-size: 13px; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.2rem; }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(227, 176, 65, 0.3); /* color dorado suave */
+  margin: 3rem auto;
+  width: 90%;
+}
+
+
