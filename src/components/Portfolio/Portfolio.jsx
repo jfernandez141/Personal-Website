@@ -47,44 +47,44 @@ export default function Portfolio() {
   return (
     <>
       <nav className={styles.nav} aria-label="Primary navigation">
-        <a className={styles.brand} href="#home" aria-label="Jhamil Fernandez home">JF<span>.</span></a>
-        <div className={styles.navLinks}><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a></div>
+        <a className={styles.brand} href="#home" aria-label="Jhamil Fernandez home">jf@colombia:~$</a>
+        <div className={styles.navLinks}><a href="#about">./about</a><a href="#work">./work</a><a href="#contact">./contact</a></div>
       </nav>
       <main>
         <section id="home" className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Backend engineer / Colombia</p>
-            <h1>Jhamil<br />Fernandez</h1>
-            <p className={styles.lede}>I build calm, reliable systems for busy products.</p>
-            <p className={styles.intro}>Backend developer focused on the architecture behind fast, useful digital experiences.</p>
-            <div className={styles.actions}><a className={styles.primaryAction} href="#work">Explore work</a><a className={styles.secondaryAction} href="#contact">Start a conversation</a></div>
+            <p className={styles.eyebrow}>$ whoami</p>
+            <h1>Jhamil<br />Fernandez_</h1>
+            <p className={styles.lede}>Backend developer building APIs, data layers and infrastructure that hold up under real use.</p>
+            <p className={styles.intro}>Based in Colombia. Working remotely with product teams that care about reliable software.</p>
+            <div className={styles.actions}><a className={styles.primaryAction} href="#work">$ ls ./work</a><a className={styles.secondaryAction} href="#contact">$ connect</a></div>
           </div>
-          <div className={styles.portraitWrap}><img src={portrait} alt="Jhamil Fernandez" /><span>Available for backend collaborations</span></div>
+          <div className={styles.portraitWrap}><img src={portrait} alt="Jhamil Fernandez" /><span>status: available for collaborations</span></div>
         </section>
 
         <section id="about" className={styles.about}>
-          <div><p className={styles.eyebrow}>What I bring</p><h2>Practical engineering, thoughtful delivery.</h2></div>
+          <div><p className={styles.eyebrow}>$ cat profile.md</p><h2>Systems thinking<br />for product teams.</h2></div>
           <p>With 4+ years of hands-on experience, I design APIs, data layers and integrations that stay understandable as a product grows. My work blends Node.js expertise with Python, SQL and containerized delivery.</p>
           <div className={styles.stats}><div><strong>4+</strong><span>years building</span></div><div><strong>API</strong><span>first mindset</span></div><div><strong>B2</strong><span>English level</span></div></div>
         </section>
 
         <section id="skills" className={styles.skills}>
-          <div className={styles.sectionInner}><p className={`${styles.eyebrow} ${styles.lightEyebrow}`}>Toolbox</p><h2>Built for the work behind the screen.</h2>
+          <div className={styles.sectionInner}><p className={`${styles.eyebrow} ${styles.lightEyebrow}`}>$ tree ./capabilities</p><h2>Tools are only useful<br />when the system is clear.</h2>
             <div className={styles.skillGrid}>{skillGroups.map(([group, skills]) => <article key={group}><h3>{group}</h3><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></article>)}</div>
           </div>
         </section>
 
         <section id="work" className={styles.work}>
-          <div className={styles.workHeading}><div><p className={styles.eyebrow}>Selected work</p><h2>Products made to be used.</h2></div><p>Each project is a chance to make data, interactions and delivery feel more deliberate.</p></div>
+          <div className={styles.workHeading}><div><p className={styles.eyebrow}>$ ls -la ./selected-work</p><h2>Things I have<br />put into motion.</h2></div><p>Each project is a chance to make data, interactions and delivery feel more deliberate.</p></div>
           <div className={styles.projectGrid}>{projects.map((project) => <article className={styles.project} key={project.name}><a className={styles.projectImage} href={project.live} target="_blank" rel="noreferrer"><img src={project.image} alt={`${project.name} project preview`} /></a><div className={styles.projectInfo}><p className={styles.stack}>{project.stack}</p><h3>{project.name}</h3><p>{project.description}</p><div className={styles.projectLinks}><a href={project.live} target="_blank" rel="noreferrer">Visit site</a><a href={project.source} target="_blank" rel="noreferrer">Source code</a></div></div></article>)}</div>
         </section>
 
         <section id="contact" className={styles.contact}>
-          <div><p className={`${styles.eyebrow} ${styles.lightEyebrow}`}>Contact</p><h2>Have a system worth building?</h2><p className={styles.contactCopy}>Tell me where you are headed and what needs to work better. I read every message.</p><div className={styles.socials}><a href="https://www.linkedin.com/in/jhamil-fernandez/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><img src={linkedin} alt="" /></a><a href="https://github.com/jfernandez141" target="_blank" rel="noreferrer" aria-label="GitHub profile"><img src={github} alt="" /></a></div></div>
-          <form className={styles.form} onSubmit={submit}><label htmlFor="name">Your name</label><input id="name" name="name" value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} placeholder="Ada Lovelace" required /><label htmlFor="email">Email address</label><input id="email" name="email" type="email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} placeholder="ada@example.com" required /><label htmlFor="message">A few details</label><textarea id="message" name="message" rows="7" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} placeholder="What are you looking to build?" required /><button type="submit" disabled={sending}>{sending ? "Sending..." : "Send message"}</button></form>
+          <div><p className={`${styles.eyebrow} ${styles.lightEyebrow}`}>$ open --channel</p><h2>Let's make the<br />next request count.</h2><p className={styles.contactCopy}>Tell me where you are headed and what needs to work better. I read every message.</p><div className={styles.socials}><a href="https://www.linkedin.com/in/jhamil-fernandez/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><img src={linkedin} alt="" /></a><a href="https://github.com/jfernandez141" target="_blank" rel="noreferrer" aria-label="GitHub profile"><img src={github} alt="" /></a></div></div>
+          <form className={styles.form} onSubmit={submit}><label htmlFor="name">Your name</label><input id="name" name="name" value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} placeholder="Ada Lovelace" required /><label htmlFor="email">Email address</label><input id="email" name="email" type="email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} placeholder="ada@example.com" required /><label htmlFor="message">A few details</label><textarea id="message" name="message" rows="7" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} placeholder="What are you looking to build?" required /><button type="submit" disabled={sending}>{sending ? "Sending..." : "./send-message"}</button></form>
         </section>
       </main>
-      <footer className={styles.footer}>© {new Date().getFullYear()} Built by <a href="https://www.linkedin.com/in/jhamil-fernandez/">Jhamil Fernandez</a></footer>
+      <footer className={styles.footer}>© {new Date().getFullYear()} <a href="https://www.linkedin.com/in/jhamil-fernandez/">Jhamil Fernandez</a> - crafted in Colombia</footer>
       <ToastContainer position="top-right" autoClose={4000} theme="light" />
     </>
   );
