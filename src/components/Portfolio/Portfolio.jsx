@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { send } from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import styles from "./Portfolio.module.css";
+import Notification from "../Notification/Notification";
 import portrait from "../../img/jfimg.jpg";
 
 const experienceStartDate = new Date(2022, 10, 1);
@@ -41,6 +40,7 @@ const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } = pr
 export default function Portfolio() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sending, setSending] = useState(false);
+  const [notification, setNotification] = useState(null);
 
   const submit = (event) => {
     event.preventDefault();
@@ -49,9 +49,9 @@ export default function Portfolio() {
     send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, form, REACT_APP_PUBLIC_KEY).then(
       () => {
         setForm({ name: "", email: "", message: "" });
-        toast.success(<><strong>$ ./send-message</strong><br /><br />✓ message delivered<br />&nbsp;&nbsp;I'll get back to you soon.</>);
+        setNotification({ id: Date.now(), type: "success" });
       },
-      () => toast.error(<><strong>$ ./send-message</strong><br /><br />✗ delivery failed<br />&nbsp;&nbsp;Please try again or reach me directly.</>)
+      () => setNotification({ id: Date.now(), type: "error" })
     ).finally(() => setSending(false));
   };
 
@@ -92,11 +92,11 @@ export default function Portfolio() {
 
         <section id="contact" className={styles.contact}>
           <div><p className={`${styles.eyebrow} ${styles.lightEyebrow}`}>$ open --channel</p><h2>Let's make the<br />next request count.</h2><p className={styles.contactCopy}>Have an idea, an opportunity, or a backend problem to solve? Let's talk.</p><div className={styles.socials}><a href="https://www.linkedin.com/in/jhamil-fernandez/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">./linkedin</a><a href="https://github.com/jfernandez141" target="_blank" rel="noreferrer" aria-label="GitHub profile">./github</a></div></div>
-          <form className={styles.form} onSubmit={submit}><label htmlFor="name">YOUR NAME</label><input id="name" name="name" value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} placeholder="Ada Lovelace" required /><label htmlFor="email">EMAIL ADDRESS</label><input id="email" name="email" type="email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} placeholder="ada@example.com" required /><label htmlFor="message">A FEW DETAILS</label><textarea id="message" name="message" rows="7" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} placeholder="What are you looking to build?" required /><button type="submit" disabled={sending}>{sending ? "Sending..." : "./send-message"}</button></form>
+          <form className={styles.form} onSubmit={submit}><label htmlFor="name">YOUR NAME</label><input id="name" name="name" value={form.name} onChange={(event) => setForm({ ...form, name: event.target.value })} placeholder="Ada Lovelace" required /><label htmlFor="email">EMAIL ADDRESS</label><input id="email" name="email" type="email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} placeholder="ada@example.com" required /><label htmlFor="message">A FEW DETAILS</label><textarea id="message" name="message" rows="7" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} placeholder="What are you looking to build?" required /><button type="submit" disabled={sending} aria-busy={sending}>./send-message</button></form>
         </section>
       </main>
       <footer className={styles.footer}>© {new Date().getFullYear()} <a href="https://www.linkedin.com/in/jhamil-fernandez/">Jhamil Fernandez</a> - crafted in Colombia</footer>
-      <ToastContainer position="top-right" autoClose={4000} theme="light" />
+      {notification && <Notification notification={notification} onDismiss={() => setNotification(null)} />}
     </>
   );
 }

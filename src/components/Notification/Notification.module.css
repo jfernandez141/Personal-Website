@@ -1,0 +1,46 @@
+.notification {
+  position: fixed;
+  z-index: 20;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: min(360px, calc(100vw - 3rem));
+  padding: 1rem 1.15rem;
+  color: #c5d9ca;
+  border: 1px solid #487060;
+  background: #0b100f;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.notification.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification strong {
+  color: #d4f26f;
+  font-weight: 500;
+}
+
+.success {
+  color: #d4f26f;
+}
+
+.error {
+  color: #e87b72;
+}
+
+@media (max-width: 680px) {
+  .notification {
+    top: 1rem;
+    right: 1rem;
+    width: calc(100vw - 2rem);
+  }
+}

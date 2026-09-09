@@ -4,8 +4,6 @@ import linkedin from "../../img/linkedin.png";
 import github from "../../img/github.png";
 import ReactGA from "react-ga";
 import { send } from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } = process.env;
 
@@ -24,18 +22,6 @@ const Form = () => {
     });
   };
 
-  const notify = (success) => {
-    const options = {
-      position: "top-right",
-      autoClose: 4000,
-      theme: "light",
-    };
-    success
-      ? toast.success("Email sent successfully! Thank you 😊", options)
-      : toast.error("Oops! Something went wrong. Please try again.", options);
-  };
-
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if (btn === "Sending...") return;
@@ -47,12 +33,10 @@ const Form = () => {
           setBtn("Send Email");
           setForm({ name: "", email: "", message: "" });
           console.log("Email sent:", result.text);
-          notify(true);
         },
         (error) => {
           setBtn("Send Email");
           console.error("Error sending email:", error.text);
-          notify(false);
         }
       );
   };
@@ -118,7 +102,6 @@ const Form = () => {
           {btn}
         </button>
       </form>
-      <ToastContainer position="top-right" autoClose={4000} theme="light" />
     </div>
   );
 };
