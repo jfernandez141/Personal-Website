@@ -35,7 +35,7 @@ const skillGroups = [
   ["Delivery", ["Docker", "Kubernetes", "GCP", "CI/CD"]],
 ];
 
-const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } = process.env;
+const { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } = import.meta.env;
 
 export default function Portfolio() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -46,7 +46,7 @@ export default function Portfolio() {
     event.preventDefault();
     if (sending) return;
     setSending(true);
-    send(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, form, REACT_APP_PUBLIC_KEY).then(
+    send(VITE_SERVICE_ID, VITE_TEMPLATE_ID, form, VITE_PUBLIC_KEY).then(
       () => {
         setForm({ name: "", email: "", message: "" });
         setNotification({ id: Date.now(), type: "success" });
