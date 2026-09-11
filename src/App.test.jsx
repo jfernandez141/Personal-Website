@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders the portfolio introduction', () => {
   render(<App />);
-  expect(screen.getByRole('heading', { name: /Jhamil Fernandez/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /Jhamil\s*Fernandez/i })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /ls \.\/experience/i })).toHaveAttribute('href', '#experience');
 });
